@@ -6,7 +6,7 @@ class CargoTrain < Train
   end
 
   def add_wagon(wagon)
-  if wagon.class == CargoWagon
+  if wagon.is_a? CargoWagon
     super
   else
     "Данный тип вагона нельзя добавить к грузовому поезду!"

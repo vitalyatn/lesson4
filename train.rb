@@ -27,6 +27,7 @@ class Train
   def delete_wagon(wagon)
     if @speed.zero?
       @wagons.delete_if {|wagon_delete| wagon_delete == wagon }
+     # @wagons = @wagons.compact
     else
       puts "Отцепить вагон нельзя! Остановите поезд!"
     end
@@ -57,6 +58,8 @@ class Train
       puts "Двигаться некуда!"
     end
   end
+
+private
 
   def next_station
     @route.stations[@station_index + 1]

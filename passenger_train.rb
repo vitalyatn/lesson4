@@ -6,7 +6,7 @@ def initialize(number)
 end
 
  def add_wagon(wagon)
-  if wagon.class == PassengerWagon
+  if wagon.is_a? PassengerWagon
     super
   else
     "Данный тип вагона нельзя добавить к пассажирскому поезду!"
